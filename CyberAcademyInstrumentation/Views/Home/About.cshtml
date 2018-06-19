@@ -1,7 +1,18 @@
-﻿@{
+﻿@using System.Diagnostics
+@using  CyberAcademyInstrumentation.Helpers
+@{
     ViewBag.Title = "About";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+
+@{ 
+
+    Trace.TraceInformation("Something happened");
+
+
+    TraceHelper.WriteOut(TraceLevel.Error, "There was a serious error here!");
+}
+
 
 <p>Use this area to provide additional information.</p>
